@@ -19,6 +19,7 @@ const Exercise = ({time, breakTime}) => {
             <div className='exercise-details'>
                 <h4>Break time</h4>
                 <p>{breakTime} minutes</p>
+
             </div>
         </div>
     </div>

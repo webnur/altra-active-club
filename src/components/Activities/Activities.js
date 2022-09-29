@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Activity from '../Activity/Activity';
 import './Activities.css'
 import image from '../../images/profile.jpg';
-import {addToStore, breakTimeStore, getStoredTime } from '../../utilites/fakebd';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faLocationDot} from '@fortawesome/free-solid-svg-icons';
 import Exercise from '../Exercise/Exercise';
@@ -15,7 +13,7 @@ const Activities = () => {
     const notify = () => toast("Wow, successfully you have done the work!");
     const [activities, setActivities] = useState([]);
     const [time, setTime] = useState([])
-    const [breakTime, setBreakTime] = useState([0]);
+    const [breakTime, setBreakTime] = useState(0);
 
     useEffect(() => {
         fetch('fakeData.json')
@@ -23,21 +21,20 @@ const Activities = () => {
         .then(data => setActivities(data))
     },[])
 
-
-
     const handleTimeAdd = activity => {
-        // const newTime = time ;
+
         const newTime = [...time, activity]
         setTime(newTime)
-        // console.log(newTime)
-        // setTime(newTime)
-        // addToStore(time)
     }
 
+    useEffect(() => {
+        const newTime = localStorage.getItem('stored-time')
+        setBreakTime(newTime)
+    },[])
     const handleBreakTime = time => {
         setBreakTime(time);
-        addToStore(time)
-        
+        localStorage.setItem('stored-time', time)
+      
     }
 
     return (
@@ -81,22 +78,9 @@ const Activities = () => {
                 </div>
             </div>
 
-            {/* Exercise Details */}
-            {/* <div>
-                <h2>Exercise Details</h2>
-                <div>
-                    <div className='exercise-details'>
-                        <h4>Exercise time</h4>
-                        <p>{time} minutes</p>
-                    </div>
-                    <div className='exercise-details'>
-                        <h4>Break time</h4>
-                        <p>{breakTime} minutes</p>
-                    </div>
-                </div>
-            </div> */}
 
             <Exercise time={time} breakTime={breakTime}></Exercise>
+
 
             {/* Activity Completed button  */}
             <div className='btn-complete'>

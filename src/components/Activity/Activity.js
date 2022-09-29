@@ -3,7 +3,7 @@ import './Activity.css'
 
 const Activity = ({activity, handleTimeAdd}) => {
     // console.log(activity)
-    const {picture, name, time, id} = activity
+    const {picture, name, time,} = activity
     return (
         <div className='activity'>
             <div className="activity-image">
