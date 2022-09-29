@@ -6,10 +6,11 @@ import {addToStore, breakTimeStore, getStoredTime } from '../../utilites/fakebd'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faLocationDot} from '@fortawesome/free-solid-svg-icons';
+import Exercise from '../Exercise/Exercise';
 
 const Activities = () => {
     const [activities, setActivities] = useState([]);
-    const [time, setTime] = useState([0])
+    const [time, setTime] = useState([])
     const [breakTime, setBreakTime] = useState([0]);
 
     useEffect(() => {
@@ -18,31 +19,15 @@ const Activities = () => {
         .then(data => setActivities(data))
     },[])
 
-    // useEffect(() => {
-    //     console.log('frist time call', activities)
-    //    const storedTime = getStoredTime()
-    //    console.log(storedTime)
-    //    for(const time in storedTime){
-    //     console.log(time)
-    //     const added = activities.find(activity => console.log(activity.time === time))
-     
-        
-    //    }
-    // },[activities])
-
-    // useEffect(() => {
-    //     // const storedTime = getStoredTime()
-    //     // console.log(storedTime);
-    //     setTime(() => getStoredTime())
-      
-    // },[activities])
 
 
-
-    const handleTimeAdd = time => {
-        const newTime = time;
+    const handleTimeAdd = activity => {
+        // const newTime = time ;
+        const newTime = [...time, activity]
         setTime(newTime)
-        addToStore(time)
+        // console.log(newTime)
+        // setTime(newTime)
+        // addToStore(time)
     }
 
     const handleBreakTime = time => {
@@ -93,7 +78,7 @@ const Activities = () => {
             </div>
 
             {/* Exercise Details */}
-            <div>
+            {/* <div>
                 <h2>Exercise Details</h2>
                 <div>
                     <div className='exercise-details'>
@@ -105,7 +90,9 @@ const Activities = () => {
                         <p>{breakTime} minutes</p>
                     </div>
                 </div>
-            </div>
+            </div> */}
+
+            <Exercise time={time} breakTime={breakTime}></Exercise>
 
             {/* Activity Completed button  */}
             <div className='btn-complete'>

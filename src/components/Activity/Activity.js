@@ -3,7 +3,7 @@ import './Activity.css'
 
 const Activity = ({activity, handleTimeAdd}) => {
     // console.log(activity)
-    const {picture, name, time} = activity
+    const {picture, name, time, id} = activity
     return (
         <div className='activity'>
             <div className="activity-image">
@@ -13,7 +13,7 @@ const Activity = ({activity, handleTimeAdd}) => {
                 <p>{name}</p>
                 <p>Time required : {time} minutes</p>
             </div>
-            <button className='btn-activity' onClick={() =>handleTimeAdd(time)}>Add To list</button>
+            <button className='btn-activity' onClick={() =>handleTimeAdd(activity)}>Add To list</button>
         </div>
     );
 };
