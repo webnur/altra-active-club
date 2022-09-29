@@ -1,0 +1,28 @@
+.post-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 10px;
+}
+.post {
+    border: 1px solid green;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.question-title {
+    margin-left: 20px;
+}
+
+@media only screen and (max-width: 576px) {
+    .post-container{
+        grid-template-columns: repeat(1, 1fr);
+   
+    }
+  }
+
+@media only screen and (max-width: 990px) and (min-width: 577px) {
+
+    .post-container {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+  }
