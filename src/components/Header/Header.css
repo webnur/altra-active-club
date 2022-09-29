@@ -1,0 +1,9 @@
+.header {
+    background-color: aqua;
+}
+
+.header-title {
+    margin-left: 20px;
+    color: cadetblue;
+    padding: 10px 0;
+}

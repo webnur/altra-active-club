@@ -2,6 +2,10 @@ import React, { useEffect, useState } from 'react';
 import Activity from '../Activity/Activity';
 import './Activities.css'
 import image from '../../images/profile.jpg';
+import {addToStore, breakTimeStore, getStoredTime } from '../../utilites/fakebd';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faLocationDot} from '@fortawesome/free-solid-svg-icons';
 
 const Activities = () => {
     const [activities, setActivities] = useState([]);
@@ -14,13 +18,37 @@ const Activities = () => {
         .then(data => setActivities(data))
     },[])
 
-    const handleTimeAdd = (time) => {
+    // useEffect(() => {
+    //     console.log('frist time call', activities)
+    //    const storedTime = getStoredTime()
+    //    console.log(storedTime)
+    //    for(const time in storedTime){
+    //     console.log(time)
+    //     const added = activities.find(activity => console.log(activity.time === time))
+     
+        
+    //    }
+    // },[activities])
+
+    // useEffect(() => {
+    //     // const storedTime = getStoredTime()
+    //     // console.log(storedTime);
+    //     setTime(() => getStoredTime())
+      
+    // },[activities])
+
+
+
+    const handleTimeAdd = time => {
         const newTime = time;
         setTime(newTime)
+        addToStore(time)
     }
 
     const handleBreakTime = time => {
-        setBreakTime(time)
+        setBreakTime(time);
+        addToStore(time)
+        
     }
 
     return (
@@ -31,12 +59,11 @@ const Activities = () => {
             }
         </div>
         <div className='history'>
-            <h1>History</h1>
             <div className='profile'>
                 <img src={image} alt="Hello" />
                 <div className='profile-info'>
                     <p>Nurul Islam</p>
-                    <p>Chandpur, Bangladesh</p>
+                    <p><FontAwesomeIcon icon={faLocationDot}></FontAwesomeIcon> Chandpur, Bangladesh</p>
                 </div>
             </div>
             <div className="more-info">
