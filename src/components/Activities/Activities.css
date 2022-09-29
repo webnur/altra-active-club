@@ -7,3 +7,30 @@
     grid-template-columns: repeat(3, 1fr);
     grid-row-gap: 20px;
 }
+.profile {
+    display: flex;
+    align-items: center;
+}
+.profile img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.profile-info {
+    margin-left: 10px;
+}
+
+.more-info {
+    display: flex;
+    align-items: center;
+    background-color: blanchedalmond;
+    margin-right: 15px;
+    padding: 0;
+   
+}
+
+.info {
+    margin-left: 20px;
+    margin-top: 10px;
+}
