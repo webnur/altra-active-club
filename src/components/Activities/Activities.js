@@ -40,6 +40,17 @@ const Activities = () => {
                     <h3>Age</h3>
                 </div>
             </div>
+
+            <div>
+                <h1>Add a Break</h1>
+                <div className='btn-group'>
+                    <button className='btn-time'>10m</button>
+                    <button className='btn-time'>20m</button>
+                    <button className='btn-time'>30m</button>
+                    <button className='btn-time'>40m</button>
+                    <button className='btn-time'>50m</button>
+                </div>
+            </div>
         </div>
         </div>
     );

@@ -1,6 +1,6 @@
 .activities-container{
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 3fr 1fr;
 }
 .activities {
     display: grid;
@@ -27,10 +27,25 @@
     background-color: blanchedalmond;
     margin-right: 15px;
     padding: 0;
-   
+   border-radius: 10px;
 }
 
 .info {
     margin-left: 20px;
     margin-top: 10px;
+}
+.btn-group {
+    background-color: #8e7575;
+    padding: 20px 5px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+.btn-time {
+    border: none;
+    padding: 10px;
+    border-radius: 55%;
+    margin-left: 10px;
+    background-color: blanchedalmond;
+    font-size: 15px;
+    font-weight: 600;
 }
