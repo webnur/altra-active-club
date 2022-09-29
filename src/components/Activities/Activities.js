@@ -12,7 +12,6 @@ const Activities = () => {
     return (
         <div className='activities-container'>
         <div className='activities'>
-            <h1>activities</h1>
             {
                 activities.map(activity => <Activity activity={activity} key={activity.id} />)
             }
