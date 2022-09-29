@@ -51,6 +51,26 @@ const Activities = () => {
                     <button className='btn-time'>50m</button>
                 </div>
             </div>
+
+            {/* Exercise Details */}
+            <div>
+                <h2>Exercise Details</h2>
+                <div>
+                    <div className='exercise-details'>
+                        <h4>Exercise time</h4>
+                        <p>20minutes</p>
+                    </div>
+                    <div className='exercise-details'>
+                        <h4>Break time</h4>
+                        <p>20minutes</p>
+                    </div>
+                </div>
+            </div>
+
+            {/* Activity Completed button  */}
+            <div className='btn-complete'>
+                <button className='btn-activity-complete'>Activity Completed</button>
+            </div>
         </div>
         </div>
     );

@@ -9,6 +9,10 @@
     height: 280px;
     border-radius: 10px;
 }
+
+.btn-complete {
+    margin-right: 10px;
+}
 .btn-activity {
     background: #FFE0B3;
     border: none;

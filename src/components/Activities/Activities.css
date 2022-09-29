@@ -49,3 +49,27 @@
     font-size: 15px;
     font-weight: 600;
 }
+
+.exercise-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: aqua;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 10px;
+}
+.exercise-details p {
+    margin-right: 10px;
+}
+
+.btn-activity-complete {
+    background: aqua;
+    border: none;
+    border-radius: 7px;
+    padding: 15px;
+    width: 100%;
+    font-weight: bold;
+    margin-right: 10px;
+}
