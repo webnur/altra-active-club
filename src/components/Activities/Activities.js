@@ -4,17 +4,32 @@ import './Activities.css'
 import image from '../../images/profile.jpg';
 
 const Activities = () => {
-    const [activities, setActivities] = useState([])
+    const [activities, setActivities] = useState([]);
+    const [time, setTime] = useState([0])
     useEffect(() => {
         fetch('fakeData.json')
         .then(response => response.json())
         .then(data => setActivities(data))
     },[])
+
+    const handleTimeAdd = (time) => {
+        console.log('click', time)
+        // let newTime = 0;
+        // if(!time){
+        //     setTime(newTime)
+        // }
+        // else {
+        //     setTime(time)
+        // }
+        const newTime = time;
+        setTime(newTime)
+    }
+
     return (
         <div className='activities-container'>
         <div className='activities'>
             {
-                activities.map(activity => <Activity activity={activity} key={activity.id} />)
+                activities.map(activity => <Activity activity={activity} handleTimeAdd={handleTimeAdd} key={activity.id} />)
             }
         </div>
         <div className='history'>
@@ -58,7 +73,7 @@ const Activities = () => {
                 <div>
                     <div className='exercise-details'>
                         <h4>Exercise time</h4>
-                        <p>20minutes</p>
+                        <p>{time} minutes</p>
                     </div>
                     <div className='exercise-details'>
                         <h4>Break time</h4>
