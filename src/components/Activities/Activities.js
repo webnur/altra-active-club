@@ -6,6 +6,8 @@ import image from '../../images/profile.jpg';
 const Activities = () => {
     const [activities, setActivities] = useState([]);
     const [time, setTime] = useState([0])
+    const [breakTime, setBreakTime] = useState([0]);
+
     useEffect(() => {
         fetch('fakeData.json')
         .then(response => response.json())
@@ -13,16 +15,12 @@ const Activities = () => {
     },[])
 
     const handleTimeAdd = (time) => {
-        console.log('click', time)
-        // let newTime = 0;
-        // if(!time){
-        //     setTime(newTime)
-        // }
-        // else {
-        //     setTime(time)
-        // }
         const newTime = time;
         setTime(newTime)
+    }
+
+    const handleBreakTime = time => {
+        setBreakTime(time)
     }
 
     return (
@@ -59,11 +57,11 @@ const Activities = () => {
             <div>
                 <h1>Add a Break</h1>
                 <div className='btn-group'>
-                    <button className='btn-time'>10m</button>
-                    <button className='btn-time'>20m</button>
-                    <button className='btn-time'>30m</button>
-                    <button className='btn-time'>40m</button>
-                    <button className='btn-time'>50m</button>
+                    <button className='btn-time' onClick={() => handleBreakTime(10)}>10m</button>
+                    <button className='btn-time' onClick={() => handleBreakTime(20)}>20m</button>
+                    <button className='btn-time' onClick={() => handleBreakTime(30)}>30m</button>
+                    <button className='btn-time' onClick={() => handleBreakTime(40)}>40m</button>
+                    <button className='btn-time' onClick={() => handleBreakTime(50)}>50m</button>
                 </div>
             </div>
 
@@ -77,7 +75,7 @@ const Activities = () => {
                     </div>
                     <div className='exercise-details'>
                         <h4>Break time</h4>
-                        <p>20minutes</p>
+                        <p>{breakTime} minutes</p>
                     </div>
                 </div>
             </div>
