@@ -8,7 +8,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faLocationDot} from '@fortawesome/free-solid-svg-icons';
 import Exercise from '../Exercise/Exercise';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Activities = () => {
+    const notify = () => toast("Wow, successfully you have done the work!");
     const [activities, setActivities] = useState([]);
     const [time, setTime] = useState([])
     const [breakTime, setBreakTime] = useState([0]);
@@ -96,7 +100,9 @@ const Activities = () => {
 
             {/* Activity Completed button  */}
             <div className='btn-complete'>
-                <button className='btn-activity-complete'>Activity Completed</button>
+                
+                <button className='btn-activity-complete' onClick={notify}>Activity Completed</button>
+                <ToastContainer />
             </div>
         </div>
         </div>
