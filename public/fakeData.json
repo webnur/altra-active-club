@@ -1,0 +1,44 @@
+[
+  {
+    "id": "6334cb07ff8182dc337382ad",
+    "picture": "https://www.eatthis.com/wp-content/uploads/sites/4/2021/11/belly-fat-visceral-obese-obesity-overweight.jpg?quality=82&strip=1",
+    "time": 20,
+    "name": "Belly Fat Loss"
+  },
+  {
+    "id": "6334cb07825cc42ee75a4757",
+    "picture": "https://static.nike.com/a/images/f_auto,cs_srgb/w_1920,c_limit/43f01829-d882-4999-bd6c-0e958191c670/the-top-3-yoga-poses-to-get-stronger-according-to-experts.jpg",
+    "time": 20,
+    "name": "Yoga"
+  },
+  {
+    "id": "6334cb073a225cb01562f5a0",
+    "picture": "https://static7.depositphotos.com/1008939/726/i/950/depositphotos_7263773-stock-photo-mountain-bike.jpg",
+    "time": 23,
+    "name": "Cycling"
+  },
+  {
+    "id": "6334cb07b62b5f2d4fc937cf",
+    "picture": "https://embed.widencdn.net/img/veritas/ywtmo4qjlm/1200x675px/swimming-crawl-stroke.jpeg",
+    "time": 24,
+    "name": "swimming"
+  },
+  {
+    "id": "6334cb073e733ba4c8c59c2d",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Milad_Kharchegani_at_the_2016_Summer_Olympics.jpg",
+    "time": 39,
+    "name": "taekwondo"
+  },
+  {
+    "id": "6334cb0775f63604f67c60af",
+    "picture": "https://www.mensjournal.com/wp-content/uploads/2019/12/wotm-main.jpg?w=900&quality=86&strip=all",
+    "time": 39,
+    "name": "pilates"
+  },
+  {
+    "id": "6334cb07f1ffb424af3fcee4",
+    "picture": "https://static.dw.com/image/59131461_101.jpg",
+    "time": 26,
+    "name": "boxing"
+  }
+]
